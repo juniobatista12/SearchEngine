@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>Projeto de PAA</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <form class="form" action="search" method="post">
+                <p class="search-text">Faça aqui sua busca:</p>
+                <input class="search-box" type="text" name="search_input">
+                <br>
+                <input class="search-button" type="submit" value="BUSCAR" id="search">
+            </form>
+        </div>
+    </body>
+
+    <style>
+
+        html, body {
+            height: 100%;
+            margin: 0px;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+        .form {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .search-text {
+            text-align: center;
+        }
+
+        .search-box {
+            border: 2px solid black;
+            padding: 2px 20px;
+            height: 30px;
+            border-radius: 15px;
+            box-sizing: border-box;
+        }
+
+        .search-button {
+            background-color: gainsboro;
+            font-weight: bold;
+            border: 2px solid black;
+            height: 30px;
+            border-radius: 15px;
+            padding: 0px 20px;
+        }
+
+    </style>
+
+
+</html>

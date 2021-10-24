@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>Projeto de PAA</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <div style="display: flex; flex-direction: row;">
+                {% for message in get_flashed_messages()%}
+                <p>Resultados da busca por: &nbsp;</p>
+                <p> </p> 
+                <p class="searched-text">{{message}}</p>
+            {% endfor %}
+            </div>
+            <ul class="results_container">
+                {% for item in data %}
+
+                    <li>
+                        <a href={{item.url}} class="url">
+                            {{item.url}}
+                        </a> <br />
+                        <a href = {{item.url}}>
+                            {{item.title}}
+                        </a> <br />
+                        {{item.extract}}
+                        <br /> <br />
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </body>
+
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0px;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            /* justify-content: center; */
+            height: 100%;
+            flex-direction: column;
+        }
+
+        .searched-text {
+            font-weight: bold;
+        }
+
+        .results_container {
+            /* background-color: gainsboro; */
+            margin: 5px;
+        }
+
+        .url {
+            font-size: smaller;
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+
+
+</html>
